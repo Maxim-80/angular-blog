@@ -15,7 +15,7 @@ export class AuthService {
   }
 
   login(user: User): Observable<any> {
-    return  this.http.post(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${environment.apiKey}`, user)
+    return this.http.post(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${environment.apiKey}`, user)
     .pipe(
       tap(this.setToken)
     )
