@@ -19,7 +19,7 @@ export class AlertComponent implements OnInit, OnDestroy {
   constructor(private alertService: AlertService) { }
 
   ngOnInit(): void {
-    this.alertService.alert$.subscribe(alert => {
+    this.aSub = this.alertService.alert$.subscribe(alert => {
       this.text = alert.text
       this.type = alert.type
 
